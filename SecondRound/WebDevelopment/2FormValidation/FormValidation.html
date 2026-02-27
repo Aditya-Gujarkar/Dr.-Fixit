@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form id="form">
+        <input type="text" id="email">
+        <button onclick="validate()">Submit</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+        function validate() {
+            var email = document.getElementById("email").value;
+
+            if (email == "") {
+                document.getElementById("msg").innerHTML = "Email required";
+            }
+
+            if (!email.includes("@")) {
+                document.getElementById("msg").innerHTML = "Invalid email";
+            }
+
+            document.getElementById("msg").innerHTML = "Success";
+        }
+    </script>
+
+</body>
+
+</html>
